@@ -116,12 +116,12 @@ Used for VL53L0X (FluidLevel) and BME280 sensors.
 |-----|------|----------|
 | CAN Bus TX | GPIO 23 | MCP2562 TXD |
 | CAN Bus RX | GPIO 5  | MCP2562 RXD |
-| OneWire Data | GPIO 18 | DS1820 Data |
+| OneWire Data | GPIO 36 | DS1820 Data |
 
 ```cpp
 #define ESP32_CAN_TX_PIN GPIO_NUM_23    // CAN Bus TX Pin
 #define ESP32_CAN_RX_PIN GPIO_NUM_5     // CAN Bus RX Pin
-#define ONE_WIRE_BUS     GPIO_NUM_18    // DS18B20 OneWire Data Pin
+#define ONE_WIRE_BUS     GPIO_NUM_36    // DS18B20 OneWire Data Pin
 ```
 
 ESP32 D1 Mini pinout reference:
