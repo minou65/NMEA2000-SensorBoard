@@ -124,6 +124,10 @@ Used for VL53L0X (FluidLevel) and BME280 sensors.
 #define ONE_WIRE_BUS     GPIO_NUM_18    // DS18B20 OneWire Data Pin
 ```
 
+ESP32 D1 Mini pinout reference:
+
+![ESP32 D1 Mini Pinout](img/D1_mini_ESP32_pinout.jpg)
+
 ## Component Selection by Variant
 
 | Component | All variants | DS1820 | FluidLevel | BME280 | BatteryMonitor |
