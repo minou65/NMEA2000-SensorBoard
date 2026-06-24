@@ -17320,7 +17320,7 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.&lt;p&gt;
 <wire x1="5" y1="-30.45" x2="23" y2="-30.45" width="0.127" layer="21"/>
 <wire x1="5.08" y1="-24.45" x2="22.86" y2="-24.45" width="0.127" layer="21"/>
 <text x="10.16" y="-27.94" size="1.27" layer="21">Antenna</text>
-<text x="7.62" y="-15.24" size="1.27" layer="21">ESP-WROOM-32</text>
+<text x="7.62" y="-22.86" size="1.27" layer="21">ESP-WROOM-32</text>
 <wire x1="-1.75" y1="8.55" x2="7.95" y2="8.55" width="0.127" layer="21"/>
 <wire x1="7.95" y1="8.55" x2="9.05" y2="6.75" width="0.127" layer="21"/>
 <wire x1="9.05" y1="6.75" x2="18.75" y2="6.75" width="0.127" layer="21"/>
@@ -17622,7 +17622,7 @@ high speed (Philips)</description>
 <part name="IC4" library="_eigene" deviceset="INA226" device=""/>
 <part name="D1" library="_smd" deviceset="1N4148" device="" value="1N4001"/>
 <part name="X1" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/3" device="" package3d_urn="urn:adsk.eagle:package:9883/1"/>
-<part name="I2" library="_esp32" deviceset="ESP32_D1_MINI" device=""/>
+<part name="IC2" library="_esp32" deviceset="ESP32_D1_MINI" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="X2" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device="" package3d_urn="urn:adsk.eagle:package:9880/1"/>
 <part name="X4" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="22-23-2031" device="" package3d_urn="urn:adsk.eagle:package:8078634/1" value="DS1820"/>
@@ -17674,8 +17674,8 @@ dürfen nicht angeschlossen werden</text>
 <attribute name="VALUE" x="166.878" y="151.13" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="IC4" gate="G$1" x="66.04" y="154.94" smashed="yes">
-<attribute name="NAME" x="30.48" y="180.34" size="1.778" layer="95"/>
-<attribute name="VALUE" x="30.48" y="177.8" size="1.778" layer="96"/>
+<attribute name="NAME" x="66.294" y="172.974" size="1.778" layer="95"/>
+<attribute name="VALUE" x="66.294" y="170.688" size="1.778" layer="96"/>
 </instance>
 <instance part="D1" gate="G$1" x="45.72" y="93.98" smashed="yes">
 <attribute name="NAME" x="48.26" y="94.4626" size="1.778" layer="95"/>
@@ -17690,7 +17690,7 @@ dürfen nicht angeschlossen werden</text>
 <instance part="X1" gate="-3" x="20.32" y="129.54" smashed="yes">
 <attribute name="NAME" x="19.05" y="130.429" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="I2" gate="G$1" x="198.12" y="109.22" smashed="yes">
+<instance part="IC2" gate="G$1" x="198.12" y="109.22" smashed="yes">
 <attribute name="NAME" x="195.58" y="132.08" size="1.27" layer="95"/>
 <attribute name="VALUE" x="195.58" y="129.54" size="1.27" layer="96"/>
 </instance>
@@ -17763,7 +17763,7 @@ dürfen nicht angeschlossen werden</text>
 <segment>
 <pinref part="IC3" gate="G$1" pin="RXD"/>
 <wire x1="167.64" y1="55.88" x2="96.52" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="I2" gate="G$1" pin="IO5"/>
+<pinref part="IC2" gate="G$1" pin="IO5"/>
 <wire x1="167.64" y1="83.82" x2="167.64" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="83.82" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
 </segment>
@@ -17787,7 +17787,7 @@ dürfen nicht angeschlossen werden</text>
 <pinref part="IC4" gate="G$1" pin="GND"/>
 <wire x1="83.82" y1="149.86" x2="83.82" y2="144.78" width="0.1524" layer="91"/>
 <junction x="144.78" y="144.78"/>
-<pinref part="I2" gate="G$1" pin="GND@1"/>
+<pinref part="IC2" gate="G$1" pin="GND@1"/>
 <wire x1="182.88" y1="124.46" x2="144.78" y2="124.46" width="0.1524" layer="91"/>
 <junction x="144.78" y="124.46"/>
 <wire x1="187.96" y1="154.94" x2="200.66" y2="154.94" width="0.1524" layer="91"/>
@@ -17829,7 +17829,7 @@ dürfen nicht angeschlossen werden</text>
 <wire x1="83.82" y1="144.78" x2="144.78" y2="144.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="I2" gate="G$1" pin="GND@2"/>
+<pinref part="IC2" gate="G$1" pin="GND@2"/>
 <wire x1="213.36" y1="109.22" x2="223.52" y2="109.22" width="0.1524" layer="91"/>
 <label x="218.44" y="109.22" size="1.778" layer="95"/>
 </segment>
@@ -17864,7 +17864,7 @@ dürfen nicht angeschlossen werden</text>
 <wire x1="86.36" y1="149.86" x2="86.36" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="147.32" x2="139.7" y2="147.32" width="0.1524" layer="91"/>
 <junction x="139.7" y="147.32"/>
-<pinref part="I2" gate="G$1" pin="3V3"/>
+<pinref part="IC2" gate="G$1" pin="3V3"/>
 <wire x1="182.88" y1="81.28" x2="139.7" y2="81.28" width="0.1524" layer="91"/>
 <junction x="139.7" y="81.28"/>
 <wire x1="170.18" y1="157.48" x2="170.18" y2="152.4" width="0.1524" layer="91"/>
@@ -17899,7 +17899,7 @@ dürfen nicht angeschlossen werden</text>
 <net name="SCL" class="0">
 <segment>
 <label x="218.44" y="119.38" size="1.778" layer="95"/>
-<pinref part="I2" gate="G$1" pin="IO22"/>
+<pinref part="IC2" gate="G$1" pin="IO22"/>
 <wire x1="213.36" y1="119.38" x2="223.52" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -17917,7 +17917,7 @@ dürfen nicht angeschlossen werden</text>
 <segment>
 <wire x1="213.36" y1="116.84" x2="223.52" y2="116.84" width="0.1524" layer="91"/>
 <label x="218.44" y="116.84" size="1.778" layer="95"/>
-<pinref part="I2" gate="G$1" pin="IO21"/>
+<pinref part="IC2" gate="G$1" pin="IO21"/>
 </segment>
 <segment>
 <pinref part="IC4" gate="G$1" pin="SDA"/>
@@ -17937,7 +17937,7 @@ dürfen nicht angeschlossen werden</text>
 <label x="76.2" y="127" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="I2" gate="G$1" pin="IO19"/>
+<pinref part="IC2" gate="G$1" pin="IO19"/>
 <wire x1="182.88" y1="88.9" x2="170.18" y2="88.9" width="0.1524" layer="91"/>
 <label x="170.18" y="88.9" size="1.778" layer="95"/>
 </segment>
@@ -17955,15 +17955,11 @@ dürfen nicht angeschlossen werden</text>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="I2" gate="G$1" pin="IO18"/>
-<wire x1="182.88" y1="91.44" x2="170.18" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="91.44" x2="170.18" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="X3" gate="-2" pin="S"/>
 <wire x1="170.18" y1="139.7" x2="170.18" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="160.02" x2="185.42" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="139.7" x2="170.18" y2="139.7" width="0.1524" layer="91"/>
-<junction x="170.18" y="139.7"/>
 <pinref part="X6" gate="-2" pin="S"/>
 <wire x1="185.42" y1="139.7" x2="198.12" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="139.7" x2="213.36" y2="139.7" width="0.1524" layer="91"/>
@@ -17976,11 +17972,15 @@ dürfen nicht angeschlossen werden</text>
 <pinref part="X4" gate="-2" pin="S"/>
 <wire x1="198.12" y1="139.7" x2="198.12" y2="160.02" width="0.1524" layer="91"/>
 <junction x="198.12" y="139.7"/>
+<junction x="170.18" y="139.7"/>
+<pinref part="IC2" gate="G$1" pin="SVP"/>
+<wire x1="170.18" y1="139.7" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="96.52" x2="182.88" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="I2" gate="G$1" pin="VCC"/>
+<pinref part="IC2" gate="G$1" pin="VCC"/>
 <wire x1="213.36" y1="106.68" x2="223.52" y2="106.68" width="0.1524" layer="91"/>
 <label x="218.44" y="106.68" size="1.778" layer="95"/>
 </segment>
@@ -18003,7 +18003,7 @@ dürfen nicht angeschlossen werden</text>
 <segment>
 <pinref part="IC3" gate="G$1" pin="TXD"/>
 <wire x1="96.52" y1="48.26" x2="170.18" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="I2" gate="G$1" pin="IO23"/>
+<pinref part="IC2" gate="G$1" pin="IO23"/>
 <wire x1="182.88" y1="86.36" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="48.26" x2="170.18" y2="86.36" width="0.1524" layer="91"/>
 </segment>
