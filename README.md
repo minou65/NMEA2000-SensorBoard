@@ -2,9 +2,31 @@
 
 A universal PCB designed to support multiple NMEA 2000 sensor projects based on an ESP32 D1 Mini and an MCP2562 CAN bus transceiver. The board provides a 5 V regulated supply from the NMEA bus power line and exposes connectors for various sensors.
 
+## Important Hint
+
+Although the term NMEA2000 is used here, the software and device are **not certified NMEA2000 products** and have not passed any official approval process.
+There is a possibility that the software or hardware does not fully comply with the NMEA2000 specification in all details.
+If you connect this device to your NMEA2000 network, you do so at your own risk.
+
 ## Schema
 
 <img src="NMEA2000-Sensorboard.png" width="500"/>
+
+## NMEA2000 Plug Pinout
+
+Reference pinout for the NMEA2000 plug:
+
+![NMEA2000 Plug Pinout](img/NMEA2000%20Plug.png)
+
+Typical NMEA2000 (Micro-C / DeviceNet) wire colors:
+
+| Pin | Signal | Wire color |
+|-----|--------|------------|
+| 1 | Shield / Drain | Bare (uninsulated) |
+| 2 | NET-S (+12 V bus supply) | Red |
+| 3 | NET-C (GND) | Black |
+| 4 | NET-H (CAN-H) | White |
+| 5 | NET-L (CAN-L) | Blue |
 
 ## Supported Projects
 
@@ -13,7 +35,7 @@ The board can be used with the following firmware projects:
 | Project | Description | Additional Components |
 |---------|-------------|----------------------|
 | [NMEA2000-DS1820](https://github.com/minou65/NMEA2000-DS1820) | Temperature monitor for up to 4 DS1820 sensors (−50 °C to +125 °C) with configurable alerts | X3–X6, R1 |
-| [NMEA2000-FluidLevel](https://github.com/minou65/NMEA2000-FluidLevel) | Tank fill-level monitor using a VL53L0X time-of-flight sensor | X7 |
+| [NMEA2000-FluidLevel](https://github.com/minou65/NMEA2000-FluidLevel) | Tank fill-level monitor using a VL53L0X time-of-flight sensor | X7, R1 |
 | [NMEA2000-BME280](https://github.com/minou65/NMEA2000-BME280) | Environmental sensor for temperature, humidity and air pressure | X7 |
 | [NMEA2000-BatteryMonitor](https://github.com/minou65/NMEA2000-BatteryMonitor) | Battery monitor using an INA226 (voltage, current, SoC, time-to-go) | X3, R1, IC4 |
 
@@ -96,7 +118,7 @@ Used for VL53L0X (FluidLevel) and BME280 sensors.
 | IC2 | ESP32 D1 Mini | ESP32_D1_MINI | ESP32_D1_MINI | Main microcontroller |
 | IC3 | MCP2562 | MCP2562SMD | SO-8 | CAN bus transceiver |
 | IC4 ¹ | INA226 | INA226 | INA226 | Current / power monitor (BatteryMonitor only) |
-| R1 ² | 4.7 kΩ | R-EU_R0805 | R0805 | OneWire pull-up (DS1820 / BatteryMonitor) |
+| R1 ² | 4.7 kΩ / 270 Ω | R-EU_R0805 | R0805 | 4.7 kΩ OneWire pull-up (DS1820 / BatteryMonitor), 270 Ω for FluidLevel |
 | X1 | — | AK500/3 | AK500/3 | Power input connector (3-pin, 2 used) |
 | X2 | — | AK500/2 | AK500/2 | CAN bus connector |
 | X3 ² | DS1820 | 22-23-2031 | 22-23-2031 | Sensor connector 1 (3-pin Molex) |
@@ -106,7 +128,7 @@ Used for VL53L0X (FluidLevel) and BME280 sensors.
 | X7 ⁴ | BUS | 22-23-2041 | 22-23-2041 | I²C bus connector (4-pin Molex) |
 
 ¹ BatteryMonitor only  
-² DS1820 and BatteryMonitor  
+² DS1820, BatteryMonitor, and FluidLevel (270 Ω)  
 ³ DS1820 only (up to 4 sensors)  
 ⁴ FluidLevel and BME280  
 
@@ -139,7 +161,7 @@ ESP32 D1 Mini pinout reference:
 | IC3       | ✓ | ✓ | ✓ | ✓ | ✓ |
 | X1 (2-pin)| ✓ | ✓ | ✓ | ✓ | ✓ (3-pin) |
 | X2        | ✓ | ✓ | ✓ | ✓ | ✓ |
-| R1        |   | ✓ |   |   | ✓ |
+| R1        |   | ✓ | ✓ |   | ✓ |
 | X3        |   | ✓ |   |   | ✓ |
 | X4–X6     |   | ✓ |   |   |   |
 | X7        |   |   | ✓ | ✓ |   |
