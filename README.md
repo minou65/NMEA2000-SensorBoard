@@ -12,22 +12,6 @@ If you connect this device to your NMEA2000 network, you do so at your own risk.
 
 <img src="NMEA2000-Sensorboard.png" width="500"/>
 
-## NMEA2000 Plug Pinout
-
-Reference pinout for the NMEA2000 plug:
-
-![NMEA2000 Plug Pinout](img/NMEA2000%20Plug.png)
-
-Typical NMEA2000 (Micro-C / DeviceNet) wire colors:
-
-| Pin | Signal | Wire color |
-|-----|--------|------------|
-| 1 | Shield / Drain | Bare (uninsulated) |
-| 2 | NET-S (+12 V bus supply) | Red |
-| 3 | NET-C (GND) | Black |
-| 4 | NET-H (CAN-H) | White |
-| 5 | NET-L (CAN-L) | Blue |
-
 ## Supported Projects
 
 The board can be used with the following firmware projects:
@@ -131,6 +115,22 @@ Used for VL53L0X (FluidLevel) and BME280 sensors.
 ² DS1820, BatteryMonitor, and FluidLevel (270 Ω)  
 ³ DS1820 only (up to 4 sensors)  
 ⁴ FluidLevel and BME280  
+
+## NMEA2000 Plug Pinout
+
+Reference pinout for the NMEA2000 plug:
+
+![NMEA2000 Plug Pinout](img/NMEA2000%20Plug.png)
+
+Typical NMEA2000 (Micro-C / DeviceNet) wire colors:
+
+| Pin | Signal | Wire color |
+|-----|--------|------------|
+| 1 | Shield / Drain | Bare (uninsulated) |
+| 2 | NET-S (+12 V bus supply) | Red |
+| 3 | NET-C (GND) | Black |
+| 4 | NET-H (CAN-H) | White |
+| 5 | NET-L (CAN-L) | Blue |
 
 ## ESP32 D1 Mini Pin Configuration
 
