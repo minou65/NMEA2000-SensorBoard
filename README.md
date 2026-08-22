@@ -12,6 +12,9 @@ If you connect this device to your NMEA2000 network, you do so at your own risk.
 
 <img src="NMEA2000-Sensorboard.png" width="500"/>
 
+> [!WARNING]
+> When using Sensorboard v3, the DATA line of the DS1820 must be disconnected from IO36 and connected to IO22 instead. Otherwise, the DS1820 will not work.
+
 ## Supported Projects
 
 The board can be used with the following firmware projects:
