@@ -2,3 +2,4 @@
 *.s*
 !*.brd
 !*.sch
+img/Thumbs.db
